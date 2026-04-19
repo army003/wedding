@@ -1,0 +1,12 @@
+# publish: не должен совпадать с корнем сайта. Перекрывает неверное значение в UI (например /).
+[build]
+  command = "yarn build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+  YARN_IGNORE_ENGINES = "true"
+  NPM_CONFIG_ENGINE_STRICT = "false"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
