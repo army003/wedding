@@ -9,14 +9,33 @@ export default function MusicPlayer() {
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
-    audio.play().catch(() => {});
+
     const onPlay = () => setPlaying(true);
     const onPause = () => setPlaying(false);
     audio.addEventListener("play", onPlay);
     audio.addEventListener("pause", onPause);
+
+    const tryPlay = () => audio.play().catch(() => {});
+
+    const onCanPlay = () => tryPlay();
+    audio.addEventListener("canplay", onCanPlay);
+
+    let removeGestureUnlock: (() => void) | undefined;
+    void audio.play().catch(() => {
+      const resume = () => {
+        tryPlay();
+        removeGestureUnlock?.();
+      };
+      document.addEventListener("pointerdown", resume, { passive: true });
+      removeGestureUnlock = () =>
+        document.removeEventListener("pointerdown", resume);
+    });
+
     return () => {
       audio.removeEventListener("play", onPlay);
       audio.removeEventListener("pause", onPause);
+      audio.removeEventListener("canplay", onCanPlay);
+      removeGestureUnlock?.();
     };
   }, []);
 
@@ -39,7 +58,13 @@ export default function MusicPlayer() {
       >
         {playing ? "⏸" : "♪"}
       </button>
-      <audio ref={audioRef} loop preload="auto">
+      <audio
+        ref={audioRef}
+        loop
+        preload="auto"
+        autoPlay
+        playsInline
+      >
         <source src="/song-beridgertons.mp3" type="audio/mpeg" />
       </audio>
     </>

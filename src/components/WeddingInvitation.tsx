@@ -17,6 +17,7 @@ export default function WeddingInvitation() {
 
   return (
     <main className="wi-page">
+      <MusicPlayer />
       <section aria-label="Шақыру">
         <div className="wi-hero-frame">
           <Image
@@ -141,8 +142,6 @@ export default function WeddingInvitation() {
       </div>
 
       <CountdownSection background={bgWife} />
-
-      <MusicPlayer />
     </main>
   );
 }
