@@ -31,7 +31,7 @@ export default function WeddingInvitation() {
           <p className="wi-header-text wi-fade-1">ТОЙҒА ШАҚЫРУ</p>
           <div className="wi-names-overlay wi-fade-2">
             <p className="wi-card-text">
-              Мұхаммедәлі
+              Мұхаммадәлі
               <br />
               &amp;
               <br />
@@ -64,9 +64,9 @@ export default function WeddingInvitation() {
               дос-жарамдар!
             </p>
             <p className="wi-invite-details">
-              сіздерді ұлымыз Мұхаммедәлі
+              сіздерді ұлымыз Мұхаммадәлі
               <br />
-              келініміз Жамиляның
+              келініміз Жәмиляның
               <br />
               үйлену тойына арналған ақ
               <br />
