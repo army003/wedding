@@ -95,8 +95,9 @@ export default function RSVPForm() {
     setStatus("loading");
 
     const body = new FormData();
+    const spouseValue = form.spouse.trim() || "Жоқ";
     body.append(ENTRY.name, form.name.trim());
-    body.append(ENTRY.spouse, form.spouse.trim());
+    body.append(ENTRY.spouse, spouseValue);
     body.append(ENTRY.coming, form.coming);
     body.append(ENTRY.phone, form.phone.trim());
 
