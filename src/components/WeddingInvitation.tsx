@@ -112,7 +112,7 @@ export default function WeddingInvitation() {
             шілде, <strong>13:00</strong>
           </p>
           <p className="wi-ceremony__venue">
-            Алматы қаласы, “Ажар” ықшам ауданы,
+            Алматы қаласы, “Акжар” ықшам ауданы,
             <br /> Егінсу көшесі 29/1
             <br />
             “Самир-1” мейрамханасында
