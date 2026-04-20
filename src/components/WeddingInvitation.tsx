@@ -57,11 +57,11 @@ export default function WeddingInvitation() {
           <div className="wi-invite-letter__content">
             <p className="wi-invite-greeting">
               <span className="wi-invite-greeting__lead">
-                Құрметті ағайын туыс,
+                Құрметті ағайын-туыс,
               </span>
-              бауырлар, құда жекжат, нағашы,
+              нағашы, бауырлар, қадірлі құда-жекжат,
               <br />
-              дос-жарандар!
+              сыйласқан дос-жарандар!
             </p>
             <p className="wi-invite-details">
               сіздерді ұлымыз Мұхаммадәлі мен
