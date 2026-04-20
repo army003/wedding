@@ -61,10 +61,10 @@ export default function WeddingInvitation() {
               </span>
               бауырлар, құда жекжат, нағашы,
               <br />
-              дос-жарамдар!
+              дос-жарандар!
             </p>
             <p className="wi-invite-details">
-              сіздерді ұлымыз Мұхаммадәлі
+              сіздерді ұлымыз Мұхаммадәлі мен
               <br />
               келініміз Жәмиляның
               <br />
