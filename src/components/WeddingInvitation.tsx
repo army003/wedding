@@ -113,7 +113,7 @@ export default function WeddingInvitation() {
           </p>
           <p className="wi-ceremony__venue">
             Алматы қаласы, “Акжар” ықшам ауданы,
-            <br /> Егінсу көшесі 29/1
+            <br /> Егінсу көшесі 29/11
             <br />
             “Самир-1” мейрамханасында
             <br />
